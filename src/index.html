@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link href="../dist/output.css" rel="stylesheet" />
+
+    <title>Frontend Mentor | Results summary component</title>
+
+    <style></style>
+  </head>
+
+  <body class="min-h-screen max-h-full flex flex-col">
+    <main class="flex items-center justify-center flex-1">
+      <div
+        class="mx-auto shadow-xl rounded-3xl flex max-w-sm md:max-w-2xl flex-col md:flex-row"
+      >
+        <!-- result section start -->
+        <div
+          class="py-8 px-12 md:w-1/2 rounded-3xl flex items-center flex-col justify-between gap-4 text-center bg-gradient-to-b from-gradients-slate-blue to-gradients-royal-blue"
+        >
+          <h3 class="text-xl font-semibold text-gray-300">Your Result</h3>
+          <div
+            class="h-48 w-48 rounded-full flex flex-col justify-center items-center bg-gradient-to-b from-gradients-violet-blue to-gradients-persian-blue"
+          >
+            <span class="text-6xl font-semibold text-white my-1">76</span>
+            <small class="font-semibold text-gray-400 opacity-70">of 100</small>
+          </div>
+          <div>
+            <p class="text-3xl font-medium mb-4 text-white">Great</p>
+            <p class="text-gray-400 font-medium">
+              You scored higher than 65% of the people who have taken these
+              tests.
+            </p>
+          </div>
+        </div>
+        <!-- result section end -->
+        <!-- summary section start -->
+        <div class="py-8 px-12 md:w-1/2 flex flex-col">
+          <h2 class="text-xl font-semibold mb-4">Summary</h2>
+          <!-- block 1  -->
+          <div
+            class="flex justify-between bg-primary-red bg-opacity-20 rounded-lg p-3 my-2"
+          >
+            <div class="flex gap-4">
+              <img src="./assets/images/icon-reaction.svg" alt="" />
+              <p class="font-semibold text-primary-red">Reaction</p>
+            </div>
+            <span class="text-gray-400 font-medium"
+              ><b class="text-gray-800">80</b>&nbsp;&nbsp;/&nbsp;100</span
+            >
+          </div>
+          <!-- block 2  -->
+          <div
+            class="flex justify-between bg-primary-yellow bg-opacity-20 rounded-lg p-3 my-2"
+          >
+            <div class="flex gap-4">
+              <img src="./assets/images/icon-memory.svg" alt="" />
+              <p class="font-semibold text-primary-yellow">Memory</p>
+            </div>
+            <span class="text-gray-400 font-medium"
+              ><b class="text-gray-800">92</b>&nbsp;&nbsp;/&nbsp;100</span
+            >
+          </div>
+          <!-- block 3  -->
+          <div
+            class="flex justify-between bg-primary-teal bg-opacity-20 rounded-lg p-3 my-2"
+          >
+            <div class="flex gap-4">
+              <img src="./assets/images/icon-verbal.svg" alt="" />
+              <p class="font-semibold text-primary-teal">Verbal</p>
+            </div>
+            <span class="text-gray-400 font-medium"
+              ><b class="text-gray-800">61</b>&nbsp;&nbsp;/&nbsp;100</span
+            >
+          </div>
+          <!-- block 4  -->
+          <div
+            class="flex justify-between bg-primary-blue bg-opacity-20 rounded-lg p-3 my-2"
+          >
+            <div class="flex gap-4">
+              <img src="./assets/images/icon-visual.svg" alt="" />
+              <p class="font-semibold text-primary-blue">Visual</p>
+            </div>
+            <span class="text-gray-400 font-medium"
+              ><b class="text-gray-800">72</b>&nbsp;&nbsp;/&nbsp;100</span
+            >
+          </div>
+          <button
+            class="bg-neutral-gray-blue text-white rounded-3xl py-3 mt-4 jumping"
+          >
+            Continue
+          </button>
+        </div>
+        <!-- summary section end -->
+      </div>
+    </main>
+    <footer class="attribution bg-slate-800 text-white w-full text-center py-2">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">DYY</a>.
+    </footer>
+    <script src="./main.js"></script>
+  </body>
+</html>

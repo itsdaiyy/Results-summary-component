@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* For Primary */
+    --color-primary-red: 0deg 100% 67%;
+    --color-primary-yellow: 39deg 100% 56%;
+    --color-primary-teal: 166deg 100% 37%;
+    --color-primary-blue: 234deg 85% 45%;
+
+    /* For Gradients */
+    --color-gradients-slate-blue: 252deg 100% 67%;
+    --color-gradients-royal-blue: 241deg 81% 54%;
+    --color-gradients-violet-blue: 256deg 72% 46%;
+    --color-gradients-persian-blue: 241deg 72% 46% / 0;
+
+    /* For Neutral */
+    --color-neutral-blue: 221deg 100% 96%;
+    --color-neutral-lavender: 241deg 100% 89%;
+    --color-neutral-gray-blue: 224deg 30% 27%;
+  }
+}
+
+.jumping {
+  --shadow: 0 2px 8px -1px rgba(0, 0, 0, 0.32);
+  --shadow-hover: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+  --duration: 0.5s;
+  --move-hover: -2px;
+  box-shadow: var(--shadow);
+  transform: translateY(var(--y));
+  transition: transform var(--duration) ease, box-shadow var(--duration) ease;
+}
+
+.jumping div {
+  display: flex;
+  justify-content: center;
+}
+
+.jumping div span {
+  display: block;
+  font-style: normal;
+}
+
+.jumping div span:nth-child(1) {
+  --d: 0.05s;
+}
+.jumping div span:nth-child(2) {
+  --d: 0.1s;
+}
+.jumping div span:nth-child(3) {
+  --d: 0.15s;
+}
+.jumping div span:nth-child(4) {
+  --d: 0.2s;
+}
+.jumping div span:nth-child(5) {
+  --d: 0.25s;
+}
+.jumping div span:nth-child(6) {
+  --d: 0.3s;
+}
+.jumping div span:nth-child(7) {
+  --d: 0.35s;
+}
+.jumping div span:nth-child(8) {
+  --d: 0.4s;
+}
+
+.jumping:hover,
+.jumping:active {
+  --y: var(--move-hover);
+  --shadow: var(--shadow-hover);
+  --move: -4px;
+}
+
+.jumping:hover span,
+.jumping:active span {
+  animation: move var(--duration) linear var(--d);
+}
+
+@keyframes move {
+  60% {
+    transform: translateY(var(--move));
+    text-shadow: 0 3px 1px rgba(0, 0, 0, 0.2);
+  }
+}
