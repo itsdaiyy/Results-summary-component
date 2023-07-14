@@ -31,7 +31,7 @@
   --move-hover: -2px;
   box-shadow: var(--shadow);
   transform: translateY(var(--y));
-  transition: transform var(--duration) ease, box-shadow var(--duration) ease;
+  /* transition: transform var(--duration) ease, box-shadow var(--duration) ease; */
 }
 
 .jumping div {
@@ -69,14 +69,26 @@
   --d: 0.4s;
 }
 
-.jumping:hover,
+@media (hover: hover) {
+  .jumping:hover,
+  .jumping:active {
+    --y: var(--move-hover);
+    --shadow: var(--shadow-hover);
+    --move: -4px;
+  }
+
+  .jumping:hover span,
+  .jumping:active span {
+    animation: move var(--duration) linear var(--d);
+  }
+}
+
 .jumping:active {
   --y: var(--move-hover);
   --shadow: var(--shadow-hover);
   --move: -4px;
 }
 
-.jumping:hover span,
 .jumping:active span {
   animation: move var(--duration) linear var(--d);
 }
