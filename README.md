@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [solution URL](https://github.com/itsdaiyy/results-summary-component/)
-- Live Site URL: [live site URL](https://itsdaiyy.github.io/results-summary-component/)
+- Solution URL: [https://github.com/itsdaiyy/results-summary-component/](https://github.com/itsdaiyy/results-summary-component/)
+- Live Site URL: [https://itsdaiyy.github.io/results-summary-component/](https://itsdaiyy.github.io/results-summary-component/)
 
 ### Built with
 
