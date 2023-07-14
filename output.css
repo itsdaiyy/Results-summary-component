@@ -568,6 +568,11 @@ video {
   margin-bottom: 0.5rem;
 }
 
+.my-8{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .mb-4{
   margin-bottom: 1rem;
 }
@@ -740,6 +745,11 @@ video {
   line-height: 1;
 }
 
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -810,7 +820,7 @@ video {
   --move-hover: -2px;
   box-shadow: var(--shadow);
   transform: translateY(var(--y));
-  transition: transform var(--duration) ease, box-shadow var(--duration) ease;
+  /* transition: transform var(--duration) ease, box-shadow var(--duration) ease; */
 }
 
 .jumping div {
@@ -855,14 +865,26 @@ video {
   --d: 0.4s;
 }
 
-.jumping:hover,
+@media (hover: hover) {
+  .jumping:hover,
+  .jumping:active {
+    --y: var(--move-hover);
+    --shadow: var(--shadow-hover);
+    --move: -4px;
+  }
+
+  .jumping:hover span,
+  .jumping:active span {
+    animation: move var(--duration) linear var(--d);
+  }
+}
+
 .jumping:active {
   --y: var(--move-hover);
   --shadow: var(--shadow-hover);
   --move: -4px;
 }
 
-.jumping:hover span,
 .jumping:active span {
   animation: move var(--duration) linear var(--d);
 }
